@@ -2,6 +2,9 @@
   "version": 2,
 	"env": {
 		"SMS_JWT_SECRET": "@qberry_sms_jwt_secret",
-    "SMS_API_SECRET": "@qberry_sms_api_secret"
+		"SMS_API_SECRET": "@qberry_sms_api_secret",
+		"HASURA_ENDPOINT": "@qberry_hasura_endpoint",
+		"HASURA_ADMIN_SECRET": "@qberry_hasura_admin_secret",
+		"ADMIN_PASSWORD": "@qberry_admin_password"
 	}
 }
