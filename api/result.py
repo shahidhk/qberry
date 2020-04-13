@@ -85,6 +85,13 @@ SELECT
     WHERE
         qberry.scores.score = {{ max_score }}
         AND qberry.scores.quiz_id = '{{ quiz_id }}'
+        AND qberry.scores.user_id NOT IN (
+            SELECT
+                    id AS user_id
+                FROM
+                    qberry.ignore_users
+        )
+        AND qberry.users.class >= 6
     ORDER BY
         random ()
     LIMIT {{ num_winners }}
